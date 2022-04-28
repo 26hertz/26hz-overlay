@@ -3,35 +3,34 @@
 
 EAPI="8"
 ETYPE="sources"
-inherit kernel-2-src-prepare-overlay
-detect_version
+inherit kernel-2
 
-DESCRIPTION="Full sources including the XanMod patchset for the ${PV} kernel tree"
+XV="1"
+DESCRIPTION="Full sources for the XanMod sources"
 HOMEPAGE="https://xanmod.org"
-LICENSE+=" CDDL"
+SRC_URI="https://github.com/xanmod/linux/archive/${PV}-xanmod${XV}.tar.gz"
+
 KEYWORDS="~amd64"
 SLOT="0"
-XANMOD_VERSION="1"
-XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
-SRC_URI="
-	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
-"
 
 src_unpack() {
-UNIPATCH_LIST_DEFAULT=""
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
-	kernel-2-src-prepare-overlay_src_unpack
+
+	unpack ${PV}-xanmod${XV}.tar.gz
+
 }
 
-src_prepare() {
+S="${WORKDIR}/linux-${PV}-xanmod${XV}"
 
-	kernel-2-src-prepare-overlay_src_prepare
+src_install() {
+
+	dodir /usr/src/
+	cp -R "${S}/" "${D}/usr/src/" || die "Install failed!"
 
 }
 
 pkg_postinst() {
-	elog "MICROCODES"
-	elog "Use xanmod-sources with microcodes"
-	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
+
+	ewarn "USE for symlink does not work"
+	ewarn "You should use (eselect kernel set X) to use the kernel sources!!!"
+
 }
