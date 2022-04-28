@@ -6,7 +6,7 @@ ETYPE="sources"
 inherit kernel-2-src-prepare-overlay
 detect_version
 
-DESCRIPTION="Full XanMod sources with cacule option and including the Gentoo patchset "
+DESCRIPTION="Full sources including the XanMod patchset for the ${PV} kernel tree"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
