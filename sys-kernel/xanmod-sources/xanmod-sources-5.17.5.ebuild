@@ -3,34 +3,36 @@
 
 EAPI="8"
 ETYPE="sources"
+XV="1"
 inherit kernel-2
 
-XV="1"
 DESCRIPTION="Full sources for the XanMod sources"
 HOMEPAGE="https://xanmod.org"
-SRC_URI="https://github.com/xanmod/linux/archive/${PV}-xanmod${XV}.tar.gz"
+SRC_URI="https://github.com/xanmod/linux/archive/${PV}-xanmod${XV}.tar.gz -> ${P}.tar.gz"
+IUSE=""
+REQUIRED_USE="!symlink !build"
 
 KEYWORDS="~amd64"
+LICENSE="GPL-2"
 SLOT="0"
-
-src_unpack() {
-
-	unpack ${PV}-xanmod${XV}.tar.gz
-
-}
 
 S="${WORKDIR}/linux-${PV}-xanmod${XV}"
 
-src_install() {
+src_unpack() {
 
-	dodir /usr/src/
-	cp -R "${S}/" "${D}/usr/src/" || die "Install failed!"
+	unpack "${A}"
 
 }
 
-pkg_postinst() {
+src_prepare() {
 
-	ewarn "USE for symlink does not work"
-	ewarn "You should use (eselect kernel set X) to use the kernel sources!!!"
+	eapply_user
+
+}
+
+src_install() {
+
+	dodir /usr/src
+	cp -R "${S}/" "${D}/usr/src/"
 
 }

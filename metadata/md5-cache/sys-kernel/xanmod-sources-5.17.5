@@ -1,8 +1,16 @@
-DEFINED_PHASES=install unpack
+BDEPEND=!build? ( sys-apps/sed )
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
 DESCRIPTION=Full sources for the XanMod sources
 EAPI=8
 HOMEPAGE=https://xanmod.org
+INHERIT=kernel-2
+IUSE=symlink build
 KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=!build? ( app-arch/cpio dev-lang/perl sys-devel/bc sys-devel/bison sys-devel/flex sys-devel/make >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+REQUIRED_USE=!symlink !build
+RESTRICT=binchecks strip
 SLOT=0
-SRC_URI=https://github.com/xanmod/linux/archive/5.17.5-xanmod1.tar.gz
-_md5_=a460ca6afad0bd02ea8e5f29532903f1
+SRC_URI=https://github.com/xanmod/linux/archive/5.17.5-xanmod1.tar.gz -> xanmod-sources-5.17.5.tar.gz
+_eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	kernel-2	b4d5583ac9c087a13f067ef82e3e5e03
+_md5_=5989dda5df8fe86730cf5ed75027550f
