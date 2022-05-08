@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install prepare unpack
+DEPEND=app-shells/zsh
+DESCRIPTION=Fish shell like syntax highlighting for zsh
+EAPI=8
+HOMEPAGE=https://github.com/zsh-users/zsh-syntax-highlighting/
+INHERIT=git-r3
+KEYWORDS=~x86 ~amd64
+LICENSE=BSD
+PROPERTIES=live live
+RDEPEND=app-shells/zsh
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=0fcd7f0c1d78ab18b9e4a0362e84cbe9
