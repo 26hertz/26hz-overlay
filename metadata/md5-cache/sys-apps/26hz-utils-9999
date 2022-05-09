@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Jaus_Hwang's personal tools
+EAPI=8
+HOMEPAGE=https://github.com/26hz/26hz-utils
+INHERIT=git-r3
+KEYWORDS=~x86 ~amd64
+LICENSE=MIT
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=12d68f8bdbed51f49b3542df4fa82eee
