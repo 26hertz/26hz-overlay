@@ -27,4 +27,5 @@ src_install() {
 	doexe ./bin/{adduse,kernelupdate}
 
 	use screenshot && doexe ./bin/{maims,flames}
+
 }
