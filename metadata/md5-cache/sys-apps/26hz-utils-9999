@@ -1,12 +1,15 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install unpack
+DEPEND=screenshot? ( media-gfx/maim media-gfx/flameshot media-gfx/imagemagick )
 DESCRIPTION=Jaus_Hwang's personal tools
 EAPI=8
 HOMEPAGE=https://github.com/26hz/26hz-utils
 INHERIT=git-r3
-KEYWORDS=~x86 ~amd64
+IUSE=screenshot
+KEYWORDS=~amd64
 LICENSE=MIT
 PROPERTIES=live
+RDEPEND=screenshot? ( media-gfx/maim media-gfx/flameshot media-gfx/imagemagick )
 SLOT=0
 _eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=12d68f8bdbed51f49b3542df4fa82eee
+_md5_=2195497fedfb128b80e80a444b8b70af

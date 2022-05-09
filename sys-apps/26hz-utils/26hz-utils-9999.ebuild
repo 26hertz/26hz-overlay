@@ -10,17 +10,21 @@ EGIT_REPO_URI="https://github.com/26hz/${PN}.git"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE=""
+KEYWORDS="~amd64"
+IUSE="screenshot"
 
-#DEPEND="
-#	media-gfx/flameshot
-#	media-gfx/maim
-#	media-gfx/imagemagick
-#"
-#RDEPEND="${DEPEND}"
+DEPEND="
+	screenshot? (
+				media-gfx/maim
+				media-gfx/flameshot
+				media-gfx/imagemagick
+				)
+"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	exeinto /usr/local/bin
-	doexe *
+	doexe ./bin/{adduse,kernelupdate}
+
+	use screenshot && doexe ./bin/{maims,flames}
 }

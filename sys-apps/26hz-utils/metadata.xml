@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>                                                                                                                      
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">    
+<pkgmetadata>                                  
+        <maintainer type="person">            
+                <email>jaus_hwang@88.com</email>    
+                <name>Jaus Hwang</name>    
+        </maintainer>    
+        <upstream>    
+                <remote-id type="github">26hz/26hz-utils</remote-id>    
+        </upstream>    
+        <use>    
+                <flag name="screenshot">install some tools for screenshot</flag>    
+        </use>    
+</pkgmetadata>
