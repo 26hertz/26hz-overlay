@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://github.com/26hz/${PN}.git"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="screenshot"
+IUSE="archtools screenshot"
 
 DEPEND="
 	screenshot? (
@@ -26,6 +26,7 @@ src_install() {
 	exeinto /usr/local/bin
 	doexe ./bin/{adduse,kernelupdate}
 
+	use archtools && doexe ./bin/{arch-chroot,genfstab}
 	use screenshot && doexe ./bin/{maims,flames}
 
 }
