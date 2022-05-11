@@ -14,6 +14,7 @@ KEYWORDS="~amd64"
 IUSE="archtools screenshot"
 
 DEPEND="
+    x11-misc/xclip
 	screenshot? (
 				media-gfx/maim
 				media-gfx/flameshot
