@@ -15,6 +15,7 @@ IUSE="archtools screenshot"
 
 DEPEND="
     x11-misc/xclip
+	net-libs/nodejs
 	screenshot? (
 				media-gfx/maim
 				media-gfx/flameshot
