@@ -20,8 +20,6 @@ KEYWORDS="~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
-#S="${WORKDIR}/${P}"
-
 src_unpack() {
 	UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${PV}-xanmod${XV}.xz"
 	UNIPATCH_LIST=""
