@@ -21,10 +21,11 @@ LICENSE="GPL-2"
 SLOT="0"
 
 src_unpack() {
-	UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${PV}-xanmod${XV}.xz"
-	UNIPATCH_LIST=""
+	universal_unpack
+	UNIPATCH_LIST="${DISTDIR}/patch-${PV}-xanmod${XV}.xz"
+	unipatch "${UNIPATCH_LIST}"
+	unpack_fix_install_path
 
-	kernel-2_src_unpack
 
 }
 
