@@ -8,13 +8,13 @@ XV="1"
 inherit kernel-2
 detect_version
 
-DESCRIPTION="Full sources for the XanMod sources"
+DESCRIPTION="XanMod: Linux kernel source code tree"
 HOMEPAGE="https://xanmod.org"
 SRC_URI="
 		https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 		https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
 		"
-IUSE=""
+IUSE="+symlink build"
 
 KEYWORDS="~amd64"
 LICENSE="GPL-2"
@@ -25,7 +25,4 @@ src_unpack() {
 	UNIPATCH_LIST="${DISTDIR}/patch-${PV}-xanmod${XV}.xz"
 	unipatch "${UNIPATCH_LIST}"
 	unpack_fix_install_path
-
-
 }
-
