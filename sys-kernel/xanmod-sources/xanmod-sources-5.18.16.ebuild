@@ -16,7 +16,7 @@ SRC_URI="
 		"
 IUSE="+symlink build"
 
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
