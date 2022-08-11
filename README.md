@@ -1,6 +1,6 @@
 # 26hz-overlay
 ---
-## Configuration in Gentoo GNU/Linux
+## Configuration in Gentoo GNU/Linux for myself. Be carefully!!!
 ### manually write Gentoo repos config file
 ```bash
 cat > /etc/portage/repos.conf/26hz-overlay.conf <<EOF
