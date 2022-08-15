@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 MY_P=linux-${PV%.*}
-XV="2"
+XV="1"
 inherit kernel-2
 detect_version
 
