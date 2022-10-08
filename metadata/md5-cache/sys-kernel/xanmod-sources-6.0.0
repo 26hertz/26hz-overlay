@@ -12,4 +12,4 @@ RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.0.tar.xz https://github.com/xanmod/linux/releases/download/6.0.0-xanmod1/patch-6.0.0-xanmod1.xz
 _eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	aa8997cf13a12b867c4c8c57383b8582
-_md5_=2b79d371762292771199eb78bf4ad8e3
+_md5_=4fea3f75fb6b04871c36af4da8c4f485

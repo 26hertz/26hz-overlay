@@ -12,4 +12,4 @@ RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz https://github.com/xanmod/linux/releases/download/5.15.72-xanmod1/patch-5.15.72-xanmod1.xz
 _eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	kernel-2	aa8997cf13a12b867c4c8c57383b8582
-_md5_=8617fc69bbee9aac16d57d032640d312
+_md5_=663c62ccd3551638137d4ecef25e3278

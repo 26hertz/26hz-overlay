@@ -15,7 +15,7 @@ SRC_URI="
 		https://github.com/xanmod/linux/releases/download/${PV}-xanmod${XV}/patch-${PV}-xanmod${XV}.xz
 		"
 IUSE="+symlink build"
-SLOT="next"
+SLOT="edge"
 KEYWORDS="~amd64"
 LICENSE="GPL-2"
 SLOT="0"
