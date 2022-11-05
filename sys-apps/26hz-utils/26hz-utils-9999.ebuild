@@ -14,6 +14,8 @@ KEYWORDS="~amd64"
 IUSE="archtools screenshot"
 
 DEPEND="
+	x11-apps/xset
+	x11-apps/xsetroot
     x11-misc/xclip
 	net-libs/nodejs
 	screenshot? (
