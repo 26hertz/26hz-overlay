@@ -1,6 +1,6 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install unpack
-DEPEND=x11-misc/xclip net-libs/nodejs screenshot? ( media-gfx/maim media-gfx/flameshot media-gfx/imagemagick )
+DEPEND=x11-apps/xset x11-apps/xsetroot x11-misc/xclip net-libs/nodejs screenshot? ( media-gfx/maim media-gfx/flameshot media-gfx/imagemagick )
 DESCRIPTION=Jaus_Hwang's personal tools
 EAPI=8
 HOMEPAGE=https://github.com/26hz/26hz-utils
@@ -9,7 +9,7 @@ IUSE=archtools screenshot
 KEYWORDS=~amd64
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=x11-misc/xclip net-libs/nodejs screenshot? ( media-gfx/maim media-gfx/flameshot media-gfx/imagemagick )
+RDEPEND=x11-apps/xset x11-apps/xsetroot x11-misc/xclip net-libs/nodejs screenshot? ( media-gfx/maim media-gfx/flameshot media-gfx/imagemagick )
 SLOT=0
-_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=9ffe5838eb0acfa9445584ca2cec56dd
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=bf44b636c8ee88c1088517019918389c
