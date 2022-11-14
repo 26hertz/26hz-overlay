@@ -5,8 +5,8 @@ EAPI=8
 
 inherit git-r3
 DESCRIPTION="Jaus_Hwang's personal tools"
-HOMEPAGE="https://github.com/26hz/26hz-utils"
-EGIT_REPO_URI="https://github.com/26hz/${PN}.git"
+HOMEPAGE="https://github.com/26hertz/26hz-utils"
+EGIT_REPO_URI="https://github.com/26hertz/${PN}.git"
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,6 +21,8 @@ DEPEND="
 	screenshot? (
 				media-gfx/maim
 				media-gfx/flameshot
+				gui-apps/grim
+				gui-apps/slurp
 				media-gfx/imagemagick
 				)
 "
@@ -28,9 +30,9 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	exeinto /usr/local/bin
-	doexe ./bin/{adduse,kernelupdate}
+	doexe ./bin/{hz-adduse,hz-genxanmod}
 
-	use archtools && doexe ./bin/{arch-chroot,genfstab}
-	use screenshot && doexe ./bin/{maims,flames}
+	use archtools && doexe ./bin/{hz-chroot,hz-genfstab}
+	use screenshot && doexe ./bin/{hz-maims,hz-flames,hz-grims}
 
 }
